@@ -1,0 +1,109 @@
+                       *** BASIC UNIX COMMANDS ***
+ 1. cat: Concatenate files and print to stdout.
+user@user:~$ cat>fil1
+poojitha kavati
+hello rgukt basar
+wel come the basar
+^C
+
+ 2. touch: Create a new file or update its timestamp.
+user@user:~$ touch fil1 fil2
+
+ 3. cp: Copy files
+user@user:~$ cp fil1 fil2
+
+ 4. mv: Move files or rename files
+user@user:~$ mv fil1 fil2
+
+5. rm: Remove files and directories
+user@user:~$ rm fil1
+
+6. mkdir: Make a directory
+user@user:~$ mkdir dir
+
+7. rmdir: Remove a directory
+user@user:~$ rmdir dir
+
+8. cd: Change directory
+user@user:~$ cd dir
+
+user@user:~/dir$ C
+C: command not found
+user@user:~/dir$ ^C
+user@user:~/dir$ 
+
+9. which: Locate a command
+user@user:~/dir$ which
+
+10. who: Locate a command
+user@user:~/dir$ who
+user     :0           2024-04-21 10:59 (:0)
+
+11. cal: Displays the calendar.
+user@user:~/dir$ cal
+     April 2024       
+Su Mo Tu We Th Fr Sa  
+    1  2  3  4  5  6  
+ 7  8  9 10 11 12 13  
+14 15 16 17 18 19 20  
+21 22 23 24 25 26 27  
+28 29 30              
+ 
+12. date: Displays the system date and time.  
+user@user:~/dir$ date
+Sunday 21 April 2024 12:30:20 PM UTC
+
+13. whoami: Displays the user id of the currently logged-in user.
+user@user:~/dir$ whoami
+Command 'whomi' not found, did you mean:
+
+  command 'whom' from deb mailutils-mh (1:3.7-2.1)
+  command 'whom' from deb mmh (0.4-2)
+  command 'whom' from deb nmh (1.7.1-6)
+  command 'whoami' from deb coreutils (8.30-3ubuntu2)
+
+
+Try: sudo apt install <deb name>
+14. ls: List directory contents
+user@user:~$ ls
+ 3tablesDBMS                 com_emp.class                 execption1.java                  mult.class                          poojitha.html                            sumn.java
+ A                           command.class                 execption2.java                  multipleinheritance1.java          'Poojitha .jpg'                           sums1.java
+ ABC.class                   compare.class                 execption.java                   multipleinheritance.java            P-oval.png                               sums.class
+ abc.java                    compare.java                  exit                             multiplication.class                power.class                              sums.java
+ ABC.java                    concat.class                  exp.class                        mult.java                           power.java                               sunstring.class
+ abstraction.java            con.class                     factorial.class                  Music                               pq.class                                 supercon.java
+ account1.java               con_emp.class                 factorial.java                   myexception.class                   price.java                               supermet.java
+ account.class               constructors.java             factors.class                    Myexception.class                   prime.class                              supervar.java
+ account.java                continue.java                 factors.java                     mythread.class                      primefactor.java                         symmetric.class
+ Ac.java                     contract_emp.class            faculty,teaches,coursedatabase   mythread.javapythanlab1                               th.class
+ 'P$1.class'                          script.html                              try.java
+ awkfile.text               'Defaultdate$1.class'         'html programs'                  'p$2.class'                          sedfile.text                             two_wheeler.class
+ AWT2.class                 'Defaultdate$2.class'          index.class                     'P$2.class'                          shape.class                              twowheeler.class
+ AWT2.java                  'Defaultdate$3.class'          insert.class                    'p$3.class'                          Shape.class                             'uni$1.class'
+ AWTex.class                'Defaultdate$4.class'          insert.java                     'P$3.class'                          shapes.class                            'uni$2.class'
+ AWTex.java                  Defaultdate.class             interfacebank.java              'p$4.ass                  Downloads                    'java lab week7'                  pack2parator           
+ 15. du: Estimate disk usage is blocks              sum.java
+user@user:~$ du
+64	./java lab week9
+76	./java lab week10
+556	./e1sem1
+72	./.pki/nssdb
+76	./.pki
+152	./functions
+564	./Documents/Java String Reverse | HackerRank_files/share_button_data
+2412	./Documents/Java String Reverse | HackerRank_files
+4	./Documents/pps
+18456	./Documents
+4	./.gnupg/private-keys-v1.d
+20	./.gnupg
+132	./.dotnet/corefx/cryptography/crls
+136	./.dotnet/corefx/cryptography
+140	./.dotnet/corefx
+144	./.dotnet
+16	./ors/shapes
+20	./ors
+20	./org/shapes
+24	./org
+16	./pack1
+16	./all
+.......
