@@ -1,0 +1,314 @@
+Grep command in Unix:
+1. create file using cat commands
+user@user:~$ cat>file1
+welcome to rgukt
+linux and ubuntu commands
+^D    
+    
+2. create file using grep commands              
+user@user:~$ cat>grepfile.text
+poojitha
+chitti
+raju
+rajitha
+kavati
+kamuramma
+user@user:~$ 
+user@user:~$ grep "poojitha" grepfile.text
+poojitha
+
+3. -h: Display the matched lines, but do not display the filenames.
+user@user:~$ grep -h "kavati" grepfile.text
+kavati
+user@user:~$ grep "i" grepfile.text
+poojitha
+chitti
+rajitha
+kavati
+
+user@user:~$ greap "i" grepfile.text
+
+Command 'greap' not found, did you mean:
+
+  command 'grep' from deb grep (3.4-1)
+  command 'grap' from deb grap (1.45-1build1)
+
+Try: sudo apt install <deb name>
+
+user@user:~$ grep "i" grepfile.text
+poojitha
+chitti
+rajitha
+kavati
+
+4.-n: Display the matched lines and their line numbers.
+user@user:~$ grep -n "chitti" grepfile.text
+2:chitti
+
+5 .create another grep file
+user@user:~$ cat>grepfile.text
+welcome to rgukt
+unix and linux are the commands
+rgukt is the greatest university
+this is unix
+^C
+
+6.-e : Specifies expression with this option. Can use multiple times.
+user@user:~$ grep -e "welcome" -e "rgukt" grepfile.text
+welcome to rgukt
+rgukt is the greatest university
+user@user:~$ grep -v  "rgukt" grepfile.text
+unix and linux are the commands
+this is unix
+
+7.-o :Print only the matched parts of a matching line, with each such part on a
+separate output line.
+user@user:~$ grep -o  "rgukt" grepfile.text
+rgukt
+rgukt
+user@user:~$ grep -o  "poojita" grepfile.text
+user@user:~$ grep -o  "unix" grepfile.text
+unix
+unix
+user@user:~$ 
+8 .create another file using cat
+user@user:~$ cat>file1
+welcome to rgukt
+linux and ubuntu commands
+^D         
+user@user:~$ cat>grepfile.text
+poojitha
+chitti
+raju
+rajitha
+kavati
+kamuramma
+user@user:~$ 
+user@user:~$ grep "poojitha" grepfile.text
+poojitha
+
+user@user:~$ grep -h "kavati" grepfile.text
+kavati
+user@user:~$ grep "i" grepfile.text
+poojitha
+chitti
+rajitha
+kavati
+user@user:~$ greap "i" grepfile.text
+
+Command 'greap' not found, did you mean:
+
+  command 'grep' from deb grep (3.4-1)
+  command 'grap' from deb grap (1.45-1build1)
+
+Try: sudo apt install <deb name>
+
+user@user:~$ grep "i" grepfile.text
+poojitha
+chitti
+rajitha
+kavati
+user@user:~$ grep -n "chitti" grepfile.text
+2:chitti
+user@user:~$ cat>grepfile.text
+welcome to rgukt
+unix and linux are the commands
+rgukt is the greatest university
+this is unix
+^C
+user@user:~$ grep -e "welcome" -e "rgukt" grepfile.text
+welcome to rgukt
+rgukt is the greatest university
+
+9. -v: This prints out all the lines that do not matches the pattern
+user@user:~$ grep -v  "rgukt" grepfile.text
+unix and linux are the commands
+this is unix
+
+10. -o :Print only the matched parts of a matching line, with each such part on a
+separate output line.
+user@user:~$ grep -o  "rgukt" grepfile.text
+rgukt
+rgukt
+user@user:~$ grep -o  "poojita" grepfile.text
+user@user:~$ grep -o  "unix" grepfile.text
+unix
+unix
+
+
+** Sort Command:  **
+11 .create numberfile
+user@user:~$ cat>number.text
+1
+2
+3
+6
+5
+6
+0
+10
+9
+12.-n: Sorts a file numerically (interprets data as numbers).
+user@user:~$ sort -n number.text
+0
+1
+2
+3
+5
+6
+6
+9
+10
+
+13.-u: Sorts a file and delete the repeated values in the numberfile
+user@user:~$ sort -u number.text
+0
+1
+10
+2
+3
+5
+6
+9
+
+14 .create month file
+user@user:~$ cat>month.text
+feburary
+march
+april
+may
+june
+july
+december
+november
+^C
+
+15.-n: Sorts a month.text 
+user@user:~$ sort -n month.text
+april
+december
+feburary
+july
+june
+march
+may
+november
+16.-n: Sorts a month.text delete the repeated names
+user@user:~$ sort -u month.text
+april
+december
+feburary
+july
+june
+march
+may
+november
+
+user@user:~$ month 's/april/APRIL month.text
+> bash: unexpected EOF while looking for matching `''
+bash: syntax error: unexpected end of file
+
+
+17. Sed Command in Unix:
+
+user@user:~$ cat>sedfile.text
+my name is poojithakavati     
+studying btech second year
+in rgukt
+user@user:~$ sed 's/btech/BTECH/' sed.file.text
+sed: can't read sed.file.text: No such file or directory
+user@user:~$ sed '/btech/BTECH/' sedfile.text
+sed: -e expression #1, char 8: unknown command: `B'
+18. Sed ‘s/hello/HELLO/g’ file1.txt:
+user@user:~$ sed 's/btech/BTECH/' sedfile.text
+my name is poojithakavati
+studying BTECH second year
+in rgukt
+user@user:~$ sed 's/poojitha/POOJITHA/' sedfile.text
+my name is POOJITHAkavati
+studying btech second year
+in rgukt
+user@user:~$ sed '/year/d' sedfile.text
+my name is poojithakavati
+in rgukt
+user@user:~$ sed '/welcome/WELCOME/' grep.text
+sed: couldn't open file ELCOME/: Is a directory
+user@user:~$ sed '/welcome/WELCOME/' grepfile.text
+sed: couldn't open file ELCOME/: Is a directory
+user@user:~$ sed '/welcome/WELCOME/' grepfile.txt
+sed: couldn't open file ELCOME/: Is a directory
+user@user:~$ sed '/rgukt/RGUKT/' grepfile.text
+welcome to rgukt
+unix and linux are the commands
+rgukt is the greatest university
+this is unix
+user@user:~$ sed 's/rgukt/RGUKT/' grepfile.text
+welcome to RGUKT
+unix and linux are the commands
+RGUKT is the greatest university
+this is unix
+user@user:~$ sed 's/rgukt/d' grepfile.text
+sed: -e expression #1, char 9: unterminated `s' command
+user@user:~$ sed '/rgukt/d' grepfile.text
+unix and linux are the commands
+this is unix
+
+  ** AWK command in Unix:  **
+ 19 .create awkfile
+
+user@user:~$ cat>awkfile.text
+poojitha storage id 4332
+poojitha window id 1234
+chitti phone id 12345
+pinki linux id 4555    
+^C
+
+
+user@user:~$ awk '{print $3,$4}' awkfile.text
+id 4332
+id 1234
+id 12345
+id 4555
+
+
+user@user:~$ awk '/chitti/{print $3,$4}' awkfile.text
+id 12345
+
+
+user@user:~$ awk '{print NR,$o}' awkfile.text
+1 poojitha storage id 4332
+2 poojitha window id 1234
+3 chitti phone id 12345
+4 pinki linux id 4555
+
+
+
+user@user:~$ awk '{print $2}' awkfile.text
+storage
+window
+phone
+linux
+
+
+user@user:~$ awk '{print NR}' awkfile.text
+1
+2
+3
+4
+
+
+user@user:~$ awk 'NR==2{print NR,%o}' awkfile.text
+
+
+awk: line 1: syntax error at or near %
+user@user:~$ awk 'NR==2{print NR,$O}' awkfile.text
+2 poojitha window id 1234
+
+
+user@user:~$ awk '/Mem/{print}' awkfile.text
+user@user:~$ awk '{print}' awkfile.text
+poojitha storage id 4332
+poojitha window id 1234
+chitti phone id 12345
+pinki linux id 4555
+user@user:~$ 
